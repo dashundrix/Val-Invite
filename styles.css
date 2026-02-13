@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('Assets/Val BG.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.curved-heading {
+  color: #FFF;
+  font-size: 40px;
+  padding: 10px 50px;
+  background-color: #FAA0A0;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+img {
+  width: 300px;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 2px solid #FFFFFF;
+}
+
+/* Button group keeps layout stable */
+.button-group {
+  position: relative;
+  width: 260px;
+  height: 80px;
+  margin: 30px auto 0;
+}
+
+/* Base button style */
+.button_yes,
+.button_no {
+  background-color: #FAA0A0;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  font-size: 20px;
+  width: 120px;
+  border: 3px solid #FFFFFF;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Yes stays normal */
+.button_yes {
+  position: absolute;
+  left: 0;
+}
+
+.button_no {
+  position: fixed;
+}
+
+.button_yes:hover,
+.button_no:hover {
+  transform: scale(1.15);
+}
+
+/* 📱 Tablets */
+@media (max-width: 1024px) {
+
+  .curved-heading {
+    font-size: 32px;
+    padding: 8px 35px;
+  }
+
+  img {
+    width: 250px;
+  }
+
+  .button_yes,
+  .button_no {
+    width: 110px;
+    font-size: 18px;
+  }
+
+  .button-group {
+    width: 240px;
+    height: 75px;
+  }
+}
+
+
+/* 📱 Phones */
+@media (max-width: 768px) {
+
+  .curved-heading {
+    font-size: 26px;
+    padding: 8px 25px;
+  }
+
+  img {
+    width: 220px;
+  }
+
+  .button_yes,
+  .button_no {
+    width: 95px;
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+
+  .button-group {
+    width: 210px;
+    height: 70px;
+  }
+}
+
+
+/* 📱 Small Phones */
+@media (max-width: 480px) {
+
+  .curved-heading {
+    font-size: 20px;
+    padding: 6px 15px;
+  }
+
+  img {
+    width: 180px;
+  }
+
+  .button_yes,
+  .button_no {
+    width: 85px;
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .button-group {
+    width: 190px;
+    height: 65px;
+  }
+}
