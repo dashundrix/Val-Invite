@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(function () {
         fireworksContainer.style.opacity = 0;
       }, 100000);
+      
     } else if (buttonType === "no") {
       const heading = document.querySelector(".curved-heading");
       heading.innerText = "Would you like to try again??";
