@@ -82,12 +82,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Remove listener after first interaction
-    document.removeEventListener("click", startMusic);
-    document.removeEventListener("touchstart", startMusic);
+      document.removeEventListener("click", startMusic, false);
+      document.removeEventListener("touchstart", startMusic, { passive: false });
     }
 
-    document.addEventListener("click", startMusic);
-    document.addEventListener("touchstart", startMusic);
+    document.addEventListener("click", startMusic, false);
+    document.addEventListener("touchstart", startMusic, { passive: false });
 
     function lessenBGM() {
     const newVolume = backgroundMusic.volume - 0.5; 
