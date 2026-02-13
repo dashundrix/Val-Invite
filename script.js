@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("touchstart", startMusic);
 
     function lessenBGM() {
-    const newVolume = backgroundMusic.volume - 0.9; 
+    const newVolume = backgroundMusic.volume - 0.5; 
     backgroundMusic.volume = newVolume;
     }
 
