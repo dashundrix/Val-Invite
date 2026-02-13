@@ -107,6 +107,11 @@ img {
     width: 240px;
     height: 75px;
   }
+
+  #fireworksContainer {
+    background-size: contain;
+    background-position: center;
+  }
 }
 
 
@@ -133,6 +138,10 @@ img {
     width: 210px;
     height: 70px;
   }
+  #fireworksContainer {
+    background-size: contain;
+    background-position: center;
+  }
 }
 
 
@@ -158,5 +167,9 @@ img {
   .button-group {
     width: 190px;
     height: 65px;
+  }
+  #fireworksContainer {
+    background-size: contain;
+    background-position: center;
   }
 }
