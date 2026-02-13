@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
     handleButtonClick("yes");
   });
 
+
     const backgroundMusic = document.getElementById("backgroundMusic");
 
     function startMusic() {
