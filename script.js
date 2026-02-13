@@ -29,6 +29,36 @@ document.addEventListener("DOMContentLoaded", function () {
         moveButton();
     }, { passive: false });
 
+    function handleButtonClick(buttonType) {
+    if (buttonType === "yes") {
+      const heading = document.querySelector(".curved-heading");
+      heading.innerText = "You're my Valentine!! Lets get married :)";
+
+
+      const image = document.querySelector("img");
+      image.src = "Assets/Wedding.gif";
+
+      const cheerSound = document.getElementById("cheerMusic");
+      cheerSound.play().catch(err => {
+        console.log("Autoplay blocked:", err);
+      });
+
+      const fireworksContainer = document.getElementById("fireworksContainer");
+      fireworksContainer.style.opacity = 1;
+      setTimeout(function () {
+        fireworksContainer.style.opacity = 0;
+      }, 100000);
+    } else if (buttonType === "no") {
+      console.log("No button clicked");
+    }
+  }
+
+  // Add event listener to the Yes button
+  const yesButton = document.querySelector(".button_yes");
+  yesButton.addEventListener("click", function () {
+    handleButtonClick("yes");
+  });
+
     const backgroundMusic = document.getElementById("backgroundMusic");
 
     function startMusic() {
@@ -43,4 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener("click", startMusic);
     document.addEventListener("touchstart", startMusic);
+
+    function lessenBGM() {
+    const newVolume = backgroundMusic.volume - 0.8; 
+    backgroundMusic.volume = newVolume;
+    }
+
+    lessenBGM();
 });

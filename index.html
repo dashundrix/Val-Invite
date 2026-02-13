@@ -9,16 +9,21 @@
 </head>
 <body>
     <div class="container">
-        <h2 class="curved-heading">Will you be my Valentine?</h2>
+        <h2 class="curved-heading">Will you be my Valentine Aliah Gwyneth Escano?</h2>
         <img src = "Assets/Cat Flower.gif" alt = "Please Cat">
         <p></p>
         <div class="button-group">
-            <button class="button_yes">Yes</button>
+            <button class="button_yes" onclick="handleButtonClick('yes')">Yes</button>
             <button class="button_no" onclick="handleButtonClick('no')">No</button>
         </div>
+        <div id="fireworksContainer"></div>
     </div>
  <audio id="backgroundMusic" loop>
     <source src="Assets/Feb 14 BGM.mp3" type="audio/mpeg">
+ </audio>
+
+ <audio id="cheerMusic">
+    <source src="Assets/cheer.mp3" type="audio/mpeg">
  </audio>
 </body>
 </html>
