@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   const noButton = document.querySelector(".button_no");
+    noButton.addEventListener("click", function () {
+    handleButtonClick("no");
+  });
 
   // Make it float over whole screen
   noButton.style.position = "fixed";
@@ -49,7 +52,17 @@ document.addEventListener("DOMContentLoaded", function () {
         fireworksContainer.style.opacity = 0;
       }, 100000);
     } else if (buttonType === "no") {
-      console.log("No button clicked");
+      const heading = document.querySelector(".curved-heading");
+      heading.innerText = "Would you like to try again??";
+
+
+      const image = document.querySelector("img");
+      image.src = "Assets/Please Cat.gif";
+
+      const booSound = document.getElementById("booMusic");
+      booSound.play().catch(err => {
+        console.log("Autoplay blocked:", err);
+      });
     }
   }
 
@@ -75,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("touchstart", startMusic);
 
     function lessenBGM() {
-    const newVolume = backgroundMusic.volume - 0.8; 
+    const newVolume = backgroundMusic.volume - 0.9; 
     backgroundMusic.volume = newVolume;
     }
 
