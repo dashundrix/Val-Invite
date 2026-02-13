@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function handleButtonClick(buttonType) {
     if (buttonType === "yes") {
       const heading = document.querySelector(".curved-heading");
-      heading.innerText = "You're my Valentine!! Lets get married :)";
+      heading.innerText = "You're my Valentine!!! Lets get married :)";
 
 
       const image = document.querySelector("img");
@@ -54,11 +54,11 @@ document.addEventListener("DOMContentLoaded", function () {
       
     } else if (buttonType === "no") {
       const heading = document.querySelector(".curved-heading");
-      heading.innerText = "Would you like to try again??";
+      heading.innerText = "You don't love me???";
 
 
       const image = document.querySelector("img");
-      image.src = "Assets/Please Cat.gif";
+      image.src = "Assets/please Cat.gif";
 
       const booSound = document.getElementById("booMusic");
       booSound.play().catch(err => {
